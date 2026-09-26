@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins", sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    
+}
+body{
+    
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 3rem 9%;
+}
+.logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.navbar a{
+    font-size: 1.8rem;
+    margin-left: 4rem;
+    color: white;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: rgba(0, 204, 255, 0.589);
+    border-bottom: 3px solid rgba(0, 204, 255, 0.589);
+}
+.home-page{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+    background: url(img3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.home{
+    padding: 12rem 9%;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #444;
+}
+.btn{
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    background: #2f6f73;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    backdrop-filter: blur;
+}
+.btn:hover{
+    background-color: #1f4f52;
+}
+.elements-wrap{
+    background: #0D1B2A;
+    color: black;
+}
+.container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: baseline;
+        gap: 1.5rem;
+        transform: translateY(130px);
+}
+.elementInfo{
+    background-color: #2f6f73;
+    color: white;
+    height: 150px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.elementInfo:hover{
+    background: white;
+    color: black;
+    transform: scale(1.03);
+}
+.elementInfo .element-icon{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 2rem;
+}
+.element-icon h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.element-icon p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+.element-2{
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    color: black;
+    padding: 80px 100px;
+    min-height: 100vh; 
+
+}
+.elements-wrap-2{
+    background: #0D1B2A;
+    color: black;
+}
+.container-2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        gap: 1.5rem;
+      
+}
+.elementInfo-2{
+    background-color: #2f6f73;
+    color: white;
+    height: 200px;
+    width: 280px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.elementInfo-2:hover{
+    background: lightgrey;
+    color: black;
+    transform: scale(1.03);
+}
+.elementInfo-2 .element-icon-2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 2rem;
+}
+.element-icon-2 h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.element-icon-2 p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+
+.text-animation{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: 'Victory Christian School';
+    color: #1f4f52;
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: lightgrey;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #444;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid #2f6f73;
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: 'Victory Christian School';
+    }
+    21%,
+    40%{
+        content: 'Victory Christian School';
+    }
+    41%,
+    60%{
+        content: 'Victory Christian School';
+    }
+    61%,
+    80%{
+        content: 'Victory Christian School';
+    }
+    81%,
+    100%{
+        content: 'Victory Christian School';
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    } 
+}
+.about{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    color: black;
+    padding: 60px 80px;
+    min-height: 100vh;
+    
+    
+}
+.about-info{
+    margin-top: 8rem;
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    position: relative;
+    width: 260px;
+    border-radius: 50%;
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    height: 260px;
+    object-fit: cover;
+    border: 5px solid #2f6f73;
+    transition: 0.3s ease-in-out;
+}
+.about-img img:hover{
+    transform: scale(1.1);
+}
+.school-name{
+    color: #2f6f73;
+}
+.heading{
+    text-align: center;
+    font-size: 3rem;
+}
+.about-info h1{
+    text-align: left;
+    line-height: 1.5;
+}
+.about-info p{
+    color: #444;
+    line-height: 1.7;
+    max-width: 500px;
+    font-size: 2rem;
+    border-left: 4px solid #2f6f73;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}  
+.read-btn{
+    background-color: #2f6f73;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none;
+    letter-spacing: 0.1rem;
+}
+.read-btn:hover {
+    background-color: #1f4f52;
+}
+.principal-title{
+    color: #2f6f73;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.contact{
+    background: white;
+    padding: 100px;
+}
+.contact-info h4{
+    color: #1f4f52;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    border-bottom: 1px solid #2f6f73;
+
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.contact-info{
+    max-width: 350px;
+}
+.contact-info p{
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+   padding: 20px;
+}
+.form-box input,
+.form-box textarea{
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.form-box button{
+    background: #2f6f73;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form-box button:hover{
+    background-color: #1f4f52;
+}
+@media (max-width: 600px){
+   .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 3rem 9%;
+   }
+}
